@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE778CA01AA2566C0060E56D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE778C9F1AA2566C0060E56D /* AppDelegate.swift */; };
+		FE778CA21AA2566C0060E56D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE778CA11AA2566C0060E56D /* ViewController.swift */; };
+		FE778CA41AA2566C0060E56D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE778CA31AA2566C0060E56D /* Images.xcassets */; };
+		FE778CA71AA2566C0060E56D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE778CA51AA2566C0060E56D /* Main.storyboard */; };
+		FE778CB31AA2566D0060E56D /* MultiMouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE778CB21AA2566D0060E56D /* MultiMouseTests.swift */; };
+		FE778CBD1AA2570E0060E56D /* mouse.png in Resources */ = {isa = PBXBuildFile; fileRef = FE778CBC1AA2570E0060E56D /* mouse.png */; };
+		FE778CBF1AA25ADE0060E56D /* mouse.png in Resources */ = {isa = PBXBuildFile; fileRef = FE778CBE1AA25ADE0060E56D /* mouse.png */; };
+		FE8ED35B1AA27ECF0085928B /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE8ED35A1AA27ECF0085928B /* Window.xib */; };
+		FE8ED35F1AA281830085928B /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8ED35E1AA281830085928B /* ApplicationServices.framework */; };
+		FEF8BF221AA32A2000D1E635 /* script.rb in Resources */ = {isa = PBXBuildFile; fileRef = FEF8BF211AA32A2000D1E635 /* script.rb */; };
+		FEF8BF241AA34B1A00D1E635 /* cursor.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8BF231AA34B1A00D1E635 /* cursor.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE778CAD1AA2566D0060E56D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE778C921AA2566C0060E56D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE778C991AA2566C0060E56D;
+			remoteInfo = MultiMouse;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FE778C9A1AA2566C0060E56D /* MultiMouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiMouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE778C9E1AA2566C0060E56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE778C9F1AA2566C0060E56D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE778CA11AA2566C0060E56D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE778CA31AA2566C0060E56D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FE778CA61AA2566C0060E56D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE778CAC1AA2566D0060E56D /* MultiMouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiMouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE778CB11AA2566D0060E56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE778CB21AA2566D0060E56D /* MultiMouseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMouseTests.swift; sourceTree = "<group>"; };
+		FE778CBC1AA2570E0060E56D /* mouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mouse.png; path = ../../mouse.png; sourceTree = "<group>"; };
+		FE778CBE1AA25ADE0060E56D /* mouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mouse.png; path = ../../mouse.png; sourceTree = "<group>"; };
+		FE8ED35A1AA27ECF0085928B /* Window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Window.xib; sourceTree = "<group>"; };
+		FE8ED35E1AA281830085928B /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		FEF8BF211AA32A2000D1E635 /* script.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = script.rb; path = ../../multimouse/script.rb; sourceTree = "<group>"; };
+		FEF8BF231AA34B1A00D1E635 /* cursor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cursor.png; path = ../../cursor.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE778C971AA2566C0060E56D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE8ED35F1AA281830085928B /* ApplicationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE778CA91AA2566D0060E56D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE778C911AA2566C0060E56D = {
+			isa = PBXGroup;
+			children = (
+				FEF8BF211AA32A2000D1E635 /* script.rb */,
+				FE8ED35E1AA281830085928B /* ApplicationServices.framework */,
+				FE778C9C1AA2566C0060E56D /* MultiMouse */,
+				FE778CAF1AA2566D0060E56D /* MultiMouseTests */,
+				FE778C9B1AA2566C0060E56D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE778C9B1AA2566C0060E56D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE778C9A1AA2566C0060E56D /* MultiMouse.app */,
+				FE778CAC1AA2566D0060E56D /* MultiMouseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE778C9C1AA2566C0060E56D /* MultiMouse */ = {
+			isa = PBXGroup;
+			children = (
+				FE778C9F1AA2566C0060E56D /* AppDelegate.swift */,
+				FE778CBE1AA25ADE0060E56D /* mouse.png */,
+				FEF8BF231AA34B1A00D1E635 /* cursor.png */,
+				FE778CBC1AA2570E0060E56D /* mouse.png */,
+				FE778CA11AA2566C0060E56D /* ViewController.swift */,
+				FE8ED35A1AA27ECF0085928B /* Window.xib */,
+				FE778CA31AA2566C0060E56D /* Images.xcassets */,
+				FE778CA51AA2566C0060E56D /* Main.storyboard */,
+				FE778C9D1AA2566C0060E56D /* Supporting Files */,
+			);
+			path = MultiMouse;
+			sourceTree = "<group>";
+		};
+		FE778C9D1AA2566C0060E56D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE778C9E1AA2566C0060E56D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE778CAF1AA2566D0060E56D /* MultiMouseTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE778CB21AA2566D0060E56D /* MultiMouseTests.swift */,
+				FE778CB01AA2566D0060E56D /* Supporting Files */,
+			);
+			path = MultiMouseTests;
+			sourceTree = "<group>";
+		};
+		FE778CB01AA2566D0060E56D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE778CB11AA2566D0060E56D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE778C991AA2566C0060E56D /* MultiMouse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE778CB61AA2566D0060E56D /* Build configuration list for PBXNativeTarget "MultiMouse" */;
+			buildPhases = (
+				FE778C961AA2566C0060E56D /* Sources */,
+				FE778C971AA2566C0060E56D /* Frameworks */,
+				FE778C981AA2566C0060E56D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultiMouse;
+			productName = MultiMouse;
+			productReference = FE778C9A1AA2566C0060E56D /* MultiMouse.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE778CAB1AA2566D0060E56D /* MultiMouseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE778CB91AA2566D0060E56D /* Build configuration list for PBXNativeTarget "MultiMouseTests" */;
+			buildPhases = (
+				FE778CA81AA2566D0060E56D /* Sources */,
+				FE778CA91AA2566D0060E56D /* Frameworks */,
+				FE778CAA1AA2566D0060E56D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE778CAE1AA2566D0060E56D /* PBXTargetDependency */,
+			);
+			name = MultiMouseTests;
+			productName = MultiMouseTests;
+			productReference = FE778CAC1AA2566D0060E56D /* MultiMouseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE778C921AA2566C0060E56D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Andrew Wetherington";
+				TargetAttributes = {
+					FE778C991AA2566C0060E56D = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					FE778CAB1AA2566D0060E56D = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = FE778C991AA2566C0060E56D;
+					};
+				};
+			};
+			buildConfigurationList = FE778C951AA2566C0060E56D /* Build configuration list for PBXProject "MultiMouse" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE778C911AA2566C0060E56D;
+			productRefGroup = FE778C9B1AA2566C0060E56D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE778C991AA2566C0060E56D /* MultiMouse */,
+				FE778CAB1AA2566D0060E56D /* MultiMouseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE778C981AA2566C0060E56D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE778CA41AA2566C0060E56D /* Images.xcassets in Resources */,
+				FEF8BF241AA34B1A00D1E635 /* cursor.png in Resources */,
+				FE8ED35B1AA27ECF0085928B /* Window.xib in Resources */,
+				FE778CBF1AA25ADE0060E56D /* mouse.png in Resources */,
+				FE778CA71AA2566C0060E56D /* Main.storyboard in Resources */,
+				FEF8BF221AA32A2000D1E635 /* script.rb in Resources */,
+				FE778CBD1AA2570E0060E56D /* mouse.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE778CAA1AA2566D0060E56D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE778C961AA2566C0060E56D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE778CA21AA2566C0060E56D /* ViewController.swift in Sources */,
+				FE778CA01AA2566C0060E56D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE778CA81AA2566D0060E56D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE778CB31AA2566D0060E56D /* MultiMouseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE778CAE1AA2566D0060E56D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE778C991AA2566C0060E56D /* MultiMouse */;
+			targetProxy = FE778CAD1AA2566D0060E56D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FE778CA51AA2566C0060E56D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE778CA61AA2566C0060E56D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE778CB41AA2566D0060E56D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FE778CB51AA2566D0060E56D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FE778CB71AA2566D0060E56D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MultiMouse/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FE778CB81AA2566D0060E56D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MultiMouse/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FE778CBA1AA2566D0060E56D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MultiMouseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MultiMouse.app/Contents/MacOS/MultiMouse";
+			};
+			name = Debug;
+		};
+		FE778CBB1AA2566D0060E56D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MultiMouseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MultiMouse.app/Contents/MacOS/MultiMouse";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE778C951AA2566C0060E56D /* Build configuration list for PBXProject "MultiMouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE778CB41AA2566D0060E56D /* Debug */,
+				FE778CB51AA2566D0060E56D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE778CB61AA2566D0060E56D /* Build configuration list for PBXNativeTarget "MultiMouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE778CB71AA2566D0060E56D /* Debug */,
+				FE778CB81AA2566D0060E56D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE778CB91AA2566D0060E56D /* Build configuration list for PBXNativeTarget "MultiMouseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE778CBA1AA2566D0060E56D /* Debug */,
+				FE778CBB1AA2566D0060E56D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE778C921AA2566C0060E56D /* Project object */;
+}

@@ -1,0 +1,1 @@
+-e 'tell application "MultiMouse"' -e 'set position of front window to {1, 1}' -e 'end tell'
