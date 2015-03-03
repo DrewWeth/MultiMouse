@@ -21,7 +21,11 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <segue destination="Vgw-eG-CnK" kind="show" id="C2e-HC-S3D"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -666,6 +670,162 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="HrV-tz-pym">
+            <objects>
+                <tabViewController selectedTabViewItemIndex="0" id="Vgw-eG-CnK" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem label="About" identifier="" id="mP1-Lf-0E0"/>
+                        <tabViewItem label="Settings" identifier="" id="AUd-Hs-qiH"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="qG7-cU-oSg">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
+                    <connections>
+                        <segue destination="lyf-Q7-beL" kind="relationship" relationship="tabItems" id="bBK-FT-044"/>
+                        <segue destination="qwn-ks-dse" kind="relationship" relationship="tabItems" id="OEB-Bf-KZj"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="suB-da-17t" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="680" y="198"/>
+        </scene>
+        <!--MultiMouse-->
+        <scene sceneID="tpS-Xi-1vm">
+            <objects>
+                <viewController title="MultiMouse" id="lyf-Q7-beL" sceneMemberID="viewController">
+                    <view key="view" id="k8F-0E-Rbe">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <box autoresizesSubviews="NO" ambiguous="YES" misplaced="YES" title="About" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="nIT-BC-3lL">
+                                <rect key="frame" x="17" y="-56" width="416" height="200"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="1" y="1" width="414" height="184"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9To-Pi-Seb">
+                                            <rect key="frame" x="16" y="123" width="382" height="51"/>
+                                            <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Use: MultiMouse displays multiple cursors on your screen! You can switch between active cursors with the click of a button." id="yTm-TE-Yf7">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </box>
+                            <box autoresizesSubviews="NO" ambiguous="YES" misplaced="YES" title="About" boxType="custom" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="cfw-9d-H7K" userLabel="Logo">
+                                <rect key="frame" x="18" y="161" width="407" height="119"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="1" y="1" width="405" height="117"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aAl-Ug-nSL">
+                                            <rect key="frame" x="5" y="-1" width="400" height="115"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="MultiMouseLogo" id="pRG-UM-zc1"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" red="0.9960784912109375" green="0.99215692281723022" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="nIT-BC-3lL" secondAttribute="centerX" id="JcG-9s-zan"/>
+                            <constraint firstAttribute="centerX" secondItem="cfw-9d-H7K" secondAttribute="centerX" constant="3.5" id="iPC-am-q1s"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="L4y-Hf-3lu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350" y="92"/>
+        </scene>
+        <!--MultiMouse-->
+        <scene sceneID="O2z-uA-a30">
+            <objects>
+                <viewController title="MultiMouse" id="qwn-ks-dse" customClass="SettingsController" customModule="MultiMouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="zr5-yH-Z2s">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <box autoresizesSubviews="NO" ambiguous="YES" misplaced="YES" title="Your Settings" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="0fE-4M-ZJI">
+                                <rect key="frame" x="17" y="23" width="416" height="257"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="1" y="1" width="414" height="241"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="07e-oZ-ZyV">
+                                            <rect key="frame" x="188" y="114" width="4" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="6i2-gQ-M9f">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Czw-ts-awv">
+                                            <rect key="frame" x="16" y="192" width="382" height="34"/>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="This is where you can reset your mouse's toggle button that allows you to switch between active cursors." id="Uix-Uv-Jvk">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLf-Np-Dsr">
+                                            <rect key="frame" x="132" y="118" width="151" height="32"/>
+                                            <buttonCell key="cell" type="push" title="Set Toggle Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8tP-eg-JkV">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="setToggleButton:" target="qwn-ks-dse" id="h4Z-Gd-6Mf"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yev-Ow-73S">
+                                            <rect key="frame" x="85" y="103" width="244" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Details" id="fFE-Fn-KM5">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b2e-ez-4Ey">
+                                            <rect key="frame" x="113" y="58" width="189" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="ToggleValue" id="PPZ-ZS-pvg">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="b2e-ez-4Ey" secondAttribute="centerX" id="hn8-iI-SK0"/>
+                                    <constraint firstAttribute="centerX" secondItem="yev-Ow-73S" secondAttribute="centerX" id="rpM-OW-zCt"/>
+                                </constraints>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="0fE-4M-ZJI" secondAttribute="centerX" id="euV-eS-4st"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentToggleLabel" destination="b2e-ez-4Ey" id="pL1-CZ-zeL"/>
+                        <outlet property="detailsLabel" destination="yev-Ow-73S" id="8BH-5a-36x"/>
+                        <outlet property="setToggleButton" destination="ZLf-Np-Dsr" id="U66-9o-Qku"/>
+                    </connections>
+                </viewController>
+                <customObject id="Ay7-ju-IPK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350" y="655"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
@@ -688,5 +848,54 @@
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="cLZ-Ps-pj6">
+            <objects>
+                <tabViewController id="5j1-Jf-bNa" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem identifier="" id="yrK-wG-GNo"/>
+                        <tabViewItem identifier="" id="gJJ-uj-TYp"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="cwU-iQ-hGg">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
+                    <connections>
+                        <segue destination="aqu-Kr-GyH" kind="relationship" relationship="tabItems" id="kkD-dw-o8Z"/>
+                        <segue destination="RiJ-OC-09Z" kind="relationship" relationship="tabItems" id="Btl-dS-TXJ"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="BHM-l2-2Sf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Bo7-5h-bAp">
+            <objects>
+                <viewController id="aqu-Kr-GyH" sceneMemberID="viewController">
+                    <view key="view" id="Z1K-mA-oV3">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="4nX-fg-YU5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4Xa-8D-3qg">
+            <objects>
+                <viewController id="RiJ-OC-09Z" sceneMemberID="viewController">
+                    <view key="view" id="zFo-l7-PrU">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="elW-kf-G9Y" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
+    <resources>
+        <image name="MultiMouseLogo" width="521" height="117"/>
+    </resources>
 </document>

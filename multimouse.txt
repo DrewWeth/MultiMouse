@@ -1,0 +1,5 @@
+Plan for MultiMouse
+
+
+Customization of mouse button for each button
+Support for variable number of mice

@@ -16,7 +16,9 @@
 		FE778CBF1AA25ADE0060E56D /* mouse.png in Resources */ = {isa = PBXBuildFile; fileRef = FE778CBE1AA25ADE0060E56D /* mouse.png */; };
 		FE8ED35B1AA27ECF0085928B /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE8ED35A1AA27ECF0085928B /* Window.xib */; };
 		FE8ED35F1AA281830085928B /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8ED35E1AA281830085928B /* ApplicationServices.framework */; };
-		FEF8BF221AA32A2000D1E635 /* script.rb in Resources */ = {isa = PBXBuildFile; fileRef = FEF8BF211AA32A2000D1E635 /* script.rb */; };
+		FEA210841AA55CEC001F4497 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA210831AA55CEC001F4497 /* PreferencePanes.framework */; };
+		FEA210861AA55EDC001F4497 /* MultiMouseLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA210851AA55EDC001F4497 /* MultiMouseLogo.png */; };
+		FEA210881AA567F2001F4497 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA210871AA567F2001F4497 /* SettingsController.swift */; };
 		FEF8BF241AA34B1A00D1E635 /* cursor.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8BF231AA34B1A00D1E635 /* cursor.png */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +46,9 @@
 		FE778CBE1AA25ADE0060E56D /* mouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mouse.png; path = ../../mouse.png; sourceTree = "<group>"; };
 		FE8ED35A1AA27ECF0085928B /* Window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Window.xib; sourceTree = "<group>"; };
 		FE8ED35E1AA281830085928B /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
-		FEF8BF211AA32A2000D1E635 /* script.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = script.rb; path = ../../multimouse/script.rb; sourceTree = "<group>"; };
+		FEA210831AA55CEC001F4497 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
+		FEA210851AA55EDC001F4497 /* MultiMouseLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MultiMouseLogo.png; path = ../../MultiMouseLogo.png; sourceTree = "<group>"; };
+		FEA210871AA567F2001F4497 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		FEF8BF231AA34B1A00D1E635 /* cursor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cursor.png; path = ../../cursor.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA210841AA55CEC001F4497 /* PreferencePanes.framework in Frameworks */,
 				FE8ED35F1AA281830085928B /* ApplicationServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,7 +75,7 @@
 		FE778C911AA2566C0060E56D = {
 			isa = PBXGroup;
 			children = (
-				FEF8BF211AA32A2000D1E635 /* script.rb */,
+				FEA210831AA55CEC001F4497 /* PreferencePanes.framework */,
 				FE8ED35E1AA281830085928B /* ApplicationServices.framework */,
 				FE778C9C1AA2566C0060E56D /* MultiMouse */,
 				FE778CAF1AA2566D0060E56D /* MultiMouseTests */,
@@ -93,9 +98,11 @@
 				FE778C9F1AA2566C0060E56D /* AppDelegate.swift */,
 				FE778CBE1AA25ADE0060E56D /* mouse.png */,
 				FEF8BF231AA34B1A00D1E635 /* cursor.png */,
+				FEA210851AA55EDC001F4497 /* MultiMouseLogo.png */,
 				FE778CBC1AA2570E0060E56D /* mouse.png */,
 				FE778CA11AA2566C0060E56D /* ViewController.swift */,
 				FE8ED35A1AA27ECF0085928B /* Window.xib */,
+				FEA210871AA567F2001F4497 /* SettingsController.swift */,
 				FE778CA31AA2566C0060E56D /* Images.xcassets */,
 				FE778CA51AA2566C0060E56D /* Main.storyboard */,
 				FE778C9D1AA2566C0060E56D /* Supporting Files */,
@@ -209,11 +216,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE778CA41AA2566C0060E56D /* Images.xcassets in Resources */,
+				FEA210861AA55EDC001F4497 /* MultiMouseLogo.png in Resources */,
 				FEF8BF241AA34B1A00D1E635 /* cursor.png in Resources */,
 				FE8ED35B1AA27ECF0085928B /* Window.xib in Resources */,
 				FE778CBF1AA25ADE0060E56D /* mouse.png in Resources */,
 				FE778CA71AA2566C0060E56D /* Main.storyboard in Resources */,
-				FEF8BF221AA32A2000D1E635 /* script.rb in Resources */,
 				FE778CBD1AA2570E0060E56D /* mouse.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA210881AA567F2001F4497 /* SettingsController.swift in Sources */,
 				FE778CA21AA2566C0060E56D /* ViewController.swift in Sources */,
 				FE778CA01AA2566C0060E56D /* AppDelegate.swift in Sources */,
 			);

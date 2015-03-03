@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MultiMouse/ViewController.swift"
-            timestampString = "446909983.189489"
+            timestampString = "447057460.695241"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "viewDidAppear()"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,13 +26,71 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MultiMouse/AppDelegate.swift"
-            timestampString = "446910164.298346"
+            timestampString = "447055072.41241"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "applicationDidFinishLaunching(_:)"
-            landmarkType = "5">
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MultiMouse.AppDelegate.toggleButton.getter : C.NSEventMask"
+                  moduleName = "MultiMouse"
+                  urlString = "file:///Users/zizimaza/Desktop/MultiMouse/MultiMouse/AppDelegate.swift"
+                  timestampString = "447055072.494237"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MultiMouse.AppDelegate.toggleButton.setter : C.NSEventMask"
+                  moduleName = "MultiMouse"
+                  urlString = "file:///Users/zizimaza/Desktop/MultiMouse/MultiMouse/AppDelegate.swift"
+                  timestampString = "447055072.496227"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MultiMouse.AppDelegate.toggleButton.materializeForSet : C.NSEventMask"
+                  moduleName = "MultiMouse"
+                  urlString = "file:///Users/zizimaza/Desktop/MultiMouse/MultiMouse/AppDelegate.swift"
+                  timestampString = "447055072.496401"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MultiMouse.AppDelegate.init (MultiMouse.AppDelegate.Type)() -&gt; MultiMouse.AppDelegate"
+                  moduleName = "MultiMouse"
+                  urlString = "file:///Users/zizimaza/Desktop/MultiMouse/MultiMouse/AppDelegate.swift"
+                  timestampString = "447055072.49654"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

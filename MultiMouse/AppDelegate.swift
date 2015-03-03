@@ -11,59 +11,63 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
-    
-    
+    var toggleButton:UInt = 25
+    var event:AnyObject!
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        self.setGlobalListener()
+        
+    }
+    
+    func setGlobalListener(){
+        
         var mm = NSApplication.sharedApplication()
         
         var window = mm.windows.last
         window!.setFrameTopLeftPoint(CGPoint(x:0, y:0))
         
-        
-        var event = NSEvent.addGlobalMonitorForEventsMatchingMask(NSEventMask.OtherMouseUpMask){
+        println("toggleButton val \(self.toggleButton)")
+        self.event = NSEvent.addGlobalMonitorForEventsMatchingMask(NSEventMaskFromType(NSEventType(rawValue: self.toggleButton)!)){
             (handler:NSEvent!) in
+            println(handler.type.rawValue)
+            //              qvar window = mm.mainWindow
+            var window = mm.windows.first as NSWindow
             
-//            var window = mm.mainWindow
-            var window = mm.windows.last
-            var frame = window!.frame
-            println("Main \(NSScreen.mainScreen()!.frame.height)")
+            window.alphaValue = 1.0
+            
+            var frame = window.frame
+            //            println("Main \(NSScreen.mainScreen()!.frame.height)")
             var fakeMousePnt = NSPoint(x: frame.origin.x, y: NSScreen.mainScreen()!.frame.height - frame.origin.y - frame.height)
-            println("Fake was at \(fakeMousePnt)")
+            //            println("Fake was at \(fakeMousePnt)")
             var nativeMousePnt = CGPoint(x: handler.locationInWindow.x, y: handler.locationInWindow.y)
-//            println("Native \(nativeMousePnt)")
+            //            println("Native \(nativeMousePnt)")
             
             
             // Swap fake mouse
-            window!.setFrameTopLeftPoint(nativeMousePnt)
+            window.setFrameTopLeftPoint(nativeMousePnt)
             // Swap new mouse
             CGWarpMouseCursorPosition(fakeMousePnt)
             
             
-             window = mm.windows.first
-            frame = window!.frame
-             fakeMousePnt = NSPoint(x:frame.origin.x, y:frame.origin.y + frame.height )
-            
-//            println("New Fake \(fakeMousePnt)")
-
             nativeMousePnt = NSEvent.mouseLocation()
             println("New Native \(nativeMousePnt)")
             
-//            let path = NSBundle.mainBundle().pathForResource("script", ofType: "scpt")
-//            println(path)
-//            var rawCommand = "ruby ~/multimouse/test.rb"
-//            println(system(rawCommand))
-//            
-//            var rawCommand = "osascript -e 'tell application \"MultiMouse\" to activate' -e 'get position of front window'"
-//
-//            var script = NSAppleScript(source: "-e 'tell application \"MultiMouse\" to activate' -e 'tell application \"System Events\" to tell process \"MultiMouse\"' -e 'get position of front window' -e 'end tell'")
-//            var error = AutoreleasingUnsafeMutablePointer<NSDictionary?>()
-//            script?.executeAndReturnError( error)
-//            println(error)
+            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC * 3))
+            dispatch_after(delayTime, dispatch_get_main_queue()){
+                
+                window.alphaValue = 0.5
+            }
         }
     }
+    
+    func editGlobalListener(){
+        NSEvent.removeMonitor(self.event)
+        self.setGlobalListener()
+    }
 
+    func getToggleButton()-> UInt{
+        return self.toggleButton
+    }
     
     
     func applicationWillTerminate(aNotification: NSNotification) {

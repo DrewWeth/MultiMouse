@@ -33,8 +33,6 @@ class ViewController: NSViewController {
         self.imageView.setFrameSize(NSSize(width: 8.0, height: 15.0))
         // Do any additional setup after loading the view.
 
-    
-    
     }
     
     override func viewDidAppear() {
@@ -44,7 +42,7 @@ class ViewController: NSViewController {
         view.window?.ignoresMouseEvents = true
         view.window?.opaque = false
         view.window?.backgroundColor = NSColor(calibratedWhite: 1.0, alpha: 0.0)
-
+        
         
     }
     
