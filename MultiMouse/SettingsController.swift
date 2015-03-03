@@ -52,6 +52,4 @@ class SettingsController: NSViewController, NSApplicationDelegate {
            return event
         })
     }
-
-    
 }
