@@ -3,3 +3,32 @@ Plan for MultiMouse
 
 Customization of mouse button for each button
 Support for variable number of mice
+
+
+
+
+SITE IDEAS
+----------
+
+No
+Big Header on the top
+
+
+Landing Page
+Logo on 1/2 page
+Name, Description, Link to Mac Store
+S3 backed video
+
+Large pictures with things that float in
+Good for duel screens
+Good for paired programming
+
+
+
+
+Home
+Blog
+Support
+-Frequently Asked Questions
+-Report A Bug
+-Press
