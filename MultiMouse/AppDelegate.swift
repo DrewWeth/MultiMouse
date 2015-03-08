@@ -16,32 +16,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         self.setGlobalListener()
-        
+
     }
     
     func setGlobalListener(){
-        
         var mm = NSApplication.sharedApplication()
         
         var window = mm.windows.last
-        window!.setFrameTopLeftPoint(CGPoint(x:0, y:0))
+        
+        var screen = NSScreen.mainScreen()?.frame
+        var screenX = screen!.width / 2
+        var screenY = screen!.height / 2
+        
+        window!.setFrameTopLeftPoint(CGPoint(x:screenX, y:screenY))
         
         println("toggleButton val \(self.toggleButton)")
         self.event = NSEvent.addGlobalMonitorForEventsMatchingMask(NSEventMaskFromType(NSEventType(rawValue: self.toggleButton)!)){
             (handler:NSEvent!) in
             println(handler.type.rawValue)
-            //              qvar window = mm.mainWindow
+            
             var window = mm.windows.first as NSWindow
-            
             window.alphaValue = 1.0
-            
             var frame = window.frame
-            //            println("Main \(NSScreen.mainScreen()!.frame.height)")
             var fakeMousePnt = NSPoint(x: frame.origin.x, y: NSScreen.mainScreen()!.frame.height - frame.origin.y - frame.height)
-            //            println("Fake was at \(fakeMousePnt)")
             var nativeMousePnt = CGPoint(x: handler.locationInWindow.x, y: handler.locationInWindow.y)
-            //            println("Native \(nativeMousePnt)")
-            
+  
             
             // Swap fake mouse
             window.setFrameTopLeftPoint(nativeMousePnt)
@@ -54,7 +53,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
             let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC * 3))
             dispatch_after(delayTime, dispatch_get_main_queue()){
-                
                 window.alphaValue = 0.5
             }
         }

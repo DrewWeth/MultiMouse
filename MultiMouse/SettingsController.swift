@@ -43,9 +43,10 @@ class SettingsController: NSViewController, NSApplicationDelegate {
                 
                 let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC * 1))
                 dispatch_after(delayTime, dispatch_get_main_queue()){
+                    self.detailsLabel.stringValue = "Press button to set toggle button."
+
                     self.appDelegate.editGlobalListener()
 
-                    self.detailsLabel.stringValue = "Press button to set toggle button."
                 }
              
             }

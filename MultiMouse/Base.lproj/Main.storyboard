@@ -23,7 +23,7 @@
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
                                             <connections>
-                                                <segue destination="Vgw-eG-CnK" kind="show" id="C2e-HC-S3D"/>
+                                                <segue destination="lyf-Q7-beL" kind="show" id="Jzi-Ln-px4"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
@@ -696,42 +696,57 @@
         <!--MultiMouse-->
         <scene sceneID="tpS-Xi-1vm">
             <objects>
-                <viewController title="MultiMouse" id="lyf-Q7-beL" sceneMemberID="viewController">
+                <viewController title="MultiMouse" id="lyf-Q7-beL" customClass="AboutController" customModule="MultiMouse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="k8F-0E-Rbe">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="326"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box autoresizesSubviews="NO" ambiguous="YES" misplaced="YES" title="About" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="nIT-BC-3lL">
-                                <rect key="frame" x="17" y="-56" width="416" height="200"/>
+                                <rect key="frame" x="17" y="23" width="416" height="137"/>
                                 <view key="contentView">
-                                    <rect key="frame" x="1" y="1" width="414" height="184"/>
+                                    <rect key="frame" x="1" y="1" width="414" height="121"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9To-Pi-Seb">
-                                            <rect key="frame" x="16" y="123" width="382" height="51"/>
-                                            <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Use: MultiMouse displays multiple cursors on your screen! You can switch between active cursors with the click of a button." id="yTm-TE-Yf7">
+                                            <rect key="frame" x="16" y="60" width="382" height="51"/>
+                                            <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="yTm-TE-Yf7">
                                                 <font key="font" metaFont="system"/>
+                                                <string key="title">Usage: MultiMouse displays multiple cursors on your screen! You can switch between active cursors by clicking the scroll button on your mouse.</string>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h31-Qb-7bh">
+                                            <rect key="frame" x="107" y="19" width="201" height="20"/>
+                                            <buttonCell key="cell" type="inline" title="http://www.multimouse.me" bezelStyle="inline" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="B1R-hj-AGk">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="systemBold"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="linkClicked:" target="lyf-Q7-beL" id="FRT-bB-JZa"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
                             <box autoresizesSubviews="NO" ambiguous="YES" misplaced="YES" title="About" boxType="custom" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="cfw-9d-H7K" userLabel="Logo">
-                                <rect key="frame" x="18" y="161" width="407" height="119"/>
+                                <rect key="frame" x="18" y="187" width="407" height="119"/>
                                 <view key="contentView">
                                     <rect key="frame" x="1" y="1" width="405" height="117"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aAl-Ug-nSL">
-                                            <rect key="frame" x="5" y="-1" width="400" height="115"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="MultiMouseLogo" id="pRG-UM-zc1"/>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aAl-Ug-nSL">
+                                            <rect key="frame" x="136" y="4" width="132" height="108"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="mmLogoBlack" id="pRG-UM-zc1"/>
                                         </imageView>
                                     </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="aAl-Ug-nSL" secondAttribute="centerX" constant="0.5" id="PYz-Rn-F30"/>
+                                    <constraint firstAttribute="centerY" secondItem="aAl-Ug-nSL" secondAttribute="centerY" constant="-0.5" id="h3F-2f-yOy"/>
+                                </constraints>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" red="0.9960784912109375" green="0.99215692281723022" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
                             </box>
@@ -741,10 +756,13 @@
                             <constraint firstAttribute="centerX" secondItem="cfw-9d-H7K" secondAttribute="centerX" constant="3.5" id="iPC-am-q1s"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="linkNSButton" destination="h31-Qb-7bh" id="Kbh-b5-tEN"/>
+                    </connections>
                 </viewController>
                 <customObject id="L4y-Hf-3lu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1350" y="92"/>
+            <point key="canvasLocation" x="1606" y="34.5"/>
         </scene>
         <!--MultiMouse-->
         <scene sceneID="O2z-uA-a30">
@@ -896,6 +914,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MultiMouseLogo" width="521" height="117"/>
+        <image name="mmLogoBlack" width="53.235126495361328" height="45.280452728271484"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Jzi-Ln-px4"/>
+    </inferredMetricsTieBreakers>
 </document>
