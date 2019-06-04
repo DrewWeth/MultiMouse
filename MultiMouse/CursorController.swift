@@ -11,7 +11,7 @@ import IOKit
 import Cocoa
 import AppKit
 
-class ViewController: NSViewController {
+class CursorController: NSViewController {
     
     @IBOutlet weak var imageView: NSImageView!
     override func viewDidLoad() {

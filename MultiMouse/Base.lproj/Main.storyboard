@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14112" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Vgw-eG-CnK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14112"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -668,7 +671,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-408" y="574"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="HrV-tz-pym">
@@ -682,9 +685,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="message"/>
-                        <tabViewItems/>
+                        <connections>
+                            <outlet property="delegate" destination="Vgw-eG-CnK" id="ewD-Y5-LN1"/>
+                        </connections>
                     </tabView>
                     <connections>
+                        <outlet property="tabView" destination="qG7-cU-oSg" id="Ao8-D4-n8Q"/>
                         <segue destination="lyf-Q7-beL" kind="relationship" relationship="tabItems" id="bBK-FT-044"/>
                         <segue destination="qwn-ks-dse" kind="relationship" relationship="tabItems" id="OEB-Bf-KZj"/>
                     </connections>
@@ -701,14 +707,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="326"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <box autoresizesSubviews="NO" ambiguous="YES" misplaced="YES" title="About" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="nIT-BC-3lL">
+                            <box autoresizesSubviews="NO" ambiguous="YES" misplaced="YES" borderType="line" title="About" translatesAutoresizingMaskIntoConstraints="NO" id="nIT-BC-3lL">
                                 <rect key="frame" x="17" y="23" width="416" height="137"/>
-                                <view key="contentView">
+                                <view key="contentView" id="ne8-GT-0DN">
                                     <rect key="frame" x="1" y="1" width="414" height="121"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9To-Pi-Seb">
                                             <rect key="frame" x="16" y="60" width="382" height="51"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="yTm-TE-Yf7">
                                                 <font key="font" metaFont="system"/>
                                                 <string key="title">Usage: MultiMouse displays multiple cursors on your screen! You can switch between active cursors by clicking the scroll button on your mouse.</string>
@@ -718,6 +725,7 @@
                                         </textField>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h31-Qb-7bh">
                                             <rect key="frame" x="107" y="19" width="201" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="inline" title="http://www.multimouse.me" bezelStyle="inline" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="B1R-hj-AGk">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="systemBold"/>
@@ -728,26 +736,23 @@
                                         </button>
                                     </subviews>
                                 </view>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
-                            <box autoresizesSubviews="NO" ambiguous="YES" misplaced="YES" title="About" boxType="custom" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="cfw-9d-H7K" userLabel="Logo">
+                            <box autoresizesSubviews="NO" ambiguous="YES" boxType="custom" title="About" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="cfw-9d-H7K" userLabel="Logo">
                                 <rect key="frame" x="18" y="187" width="407" height="119"/>
-                                <view key="contentView">
+                                <view key="contentView" id="SeX-wD-kmJ">
                                     <rect key="frame" x="1" y="1" width="405" height="117"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aAl-Ug-nSL">
-                                            <rect key="frame" x="136" y="4" width="132" height="108"/>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aAl-Ug-nSL">
+                                            <rect key="frame" x="136" y="4" width="54" height="46"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="mmLogoBlack" id="pRG-UM-zc1"/>
                                         </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="aAl-Ug-nSL" secondAttribute="centerX" constant="0.5" id="PYz-Rn-F30"/>
-                                    <constraint firstAttribute="centerY" secondItem="aAl-Ug-nSL" secondAttribute="centerY" constant="-0.5" id="h3F-2f-yOy"/>
+                                    <constraint firstAttribute="centerY" secondItem="aAl-Ug-nSL" secondAttribute="centerY" constant="-0.5" id="Flb-Te-Kpx"/>
+                                    <constraint firstAttribute="centerX" secondItem="aAl-Ug-nSL" secondAttribute="centerX" constant="0.5" id="Vub-xh-4iU"/>
                                 </constraints>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" red="0.9960784912109375" green="0.99215692281723022" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
                             </box>
                         </subviews>
@@ -769,17 +774,18 @@
             <objects>
                 <viewController title="MultiMouse" id="qwn-ks-dse" customClass="SettingsController" customModule="MultiMouse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="zr5-yH-Z2s">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="451" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <box autoresizesSubviews="NO" ambiguous="YES" misplaced="YES" title="Your Settings" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="0fE-4M-ZJI">
+                            <box autoresizesSubviews="NO" ambiguous="YES" misplaced="YES" borderType="line" title="Your Settings" translatesAutoresizingMaskIntoConstraints="NO" id="0fE-4M-ZJI">
                                 <rect key="frame" x="17" y="23" width="416" height="257"/>
-                                <view key="contentView">
+                                <view key="contentView" id="wnX-h4-gyn">
                                     <rect key="frame" x="1" y="1" width="414" height="241"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="07e-oZ-ZyV">
                                             <rect key="frame" x="188" y="114" width="4" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="6i2-gQ-M9f">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -788,6 +794,7 @@
                                         </textField>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Czw-ts-awv">
                                             <rect key="frame" x="16" y="192" width="382" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="This is where you can reset your mouse's toggle button that allows you to switch between active cursors." id="Uix-Uv-Jvk">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -796,6 +803,7 @@
                                         </textField>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLf-Np-Dsr">
                                             <rect key="frame" x="132" y="118" width="151" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="push" title="Set Toggle Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8tP-eg-JkV">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -823,11 +831,9 @@
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="b2e-ez-4Ey" secondAttribute="centerX" id="hn8-iI-SK0"/>
-                                    <constraint firstAttribute="centerX" secondItem="yev-Ow-73S" secondAttribute="centerX" id="rpM-OW-zCt"/>
+                                    <constraint firstAttribute="centerX" secondItem="b2e-ez-4Ey" secondAttribute="centerX" id="5d4-Wg-cI0"/>
+                                    <constraint firstAttribute="centerX" secondItem="yev-Ow-73S" secondAttribute="centerX" id="aCL-f1-Lha"/>
                                 </constraints>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
                         </subviews>
                         <constraints>
@@ -844,16 +850,17 @@
             </objects>
             <point key="canvasLocation" x="1350" y="655"/>
         </scene>
-        <!--View Controller-->
+        <!--Cursor Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="MultiMouse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="CursorController" customModule="MultiMouse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="8" height="15"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z0Y-s4-7dv">
                                 <rect key="frame" x="0.0" y="0.0" width="8" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="4em-Yt-f57"/>
                             </imageView>
                         </subviews>
@@ -878,15 +885,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="message"/>
-                        <tabViewItems/>
+                        <connections>
+                            <outlet property="delegate" destination="5j1-Jf-bNa" id="V9f-ZD-boc"/>
+                        </connections>
                     </tabView>
                     <connections>
+                        <outlet property="tabView" destination="cwU-iQ-hGg" id="O6O-m9-25s"/>
                         <segue destination="aqu-Kr-GyH" kind="relationship" relationship="tabItems" id="kkD-dw-o8Z"/>
                         <segue destination="RiJ-OC-09Z" kind="relationship" relationship="tabItems" id="Btl-dS-TXJ"/>
                     </connections>
                 </tabViewController>
                 <customObject id="BHM-l2-2Sf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="594" y="655"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Bo7-5h-bAp">
@@ -911,12 +922,13 @@
                 </viewController>
                 <customObject id="elW-kf-G9Y" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="281" y="610"/>
         </scene>
     </scenes>
     <resources>
         <image name="mmLogoBlack" width="53.235126495361328" height="45.280452728271484"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jzi-Ln-px4"/>
+        <segue reference="bBK-FT-044"/>
     </inferredMetricsTieBreakers>
 </document>
