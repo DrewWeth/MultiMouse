@@ -20,8 +20,7 @@ class AboutController: NSViewController, NSApplicationDelegate {
     }
     
     @IBAction func linkClicked(sender: AnyObject) {
-        println("clicked")
-        NSWorkspace.sharedWorkspace().openURL(NSURL(string: "http://www.multimouse.me")!)
+        NSWorkspace.shared.open(NSURL(string: "http://multimouse.herokuapp.com/")! as URL)
     }
     
 }

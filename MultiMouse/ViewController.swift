@@ -19,14 +19,13 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         
         
+        self.imageView.image = NSImage(contentsOfFile: "cursor.png")
         
-        self.imageView.image = NSImage(named: "cursor.png")
-        
-        var rect = NSRect(x: 0, y: 0, width: 8.0, height: 15.0)
-        var window = NSWindow(contentRect: rect, styleMask: 1, backing: NSBackingStoreType.Buffered, defer: false)
+        let rect = NSRect(x: 0, y: 0, width: 8.0, height: 15.0)
+        let window = NSWindow(contentRect: rect, styleMask: NSWindow.StyleMask(rawValue: 1), backing: NSWindow.BackingStoreType.buffered, defer: false)
         window.awakeFromNib()
 
-        var point = NSPoint(x: 0.0, y: 0.0)
+        let point = NSPoint(x: 0.0, y: 0.0)
         self.imageView.setFrameOrigin(point)
         
         self.imageView.setFrameSize(NSSize(width: 8.0, height: 15.0))
@@ -34,15 +33,15 @@ class ViewController: NSViewController {
     }
     
     override func viewDidAppear() {
-        println(view.window)
+        print(view.window)
         
-        view.window?.level = Int(CGWindowLevelForKey(Int32(kCGFloatingWindowLevelKey)))
+        view.window?.level = NSWindow.Level(rawValue: Int(CGWindowLevelForKey(CGWindowLevelKey(rawValue: Int32(kCGFloatingWindowLevel))!)))
         view.window?.ignoresMouseEvents = true
-        view.window?.opaque = false
+        view.window?.isOpaque = false
         view.window?.backgroundColor = NSColor(calibratedWhite: 1.0, alpha: 0.0)
     }
     
-    override var representedObject: AnyObject? {
+    override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
         }

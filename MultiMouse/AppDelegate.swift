@@ -12,50 +12,43 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     var toggleButton:UInt = 25
-    var event:AnyObject!
+    var event:Any?
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+
         self.setGlobalListener()
 
     }
     
     func setGlobalListener(){
-        var mm = NSApplication.sharedApplication()
+        let mm = NSApplication.shared
         
-        var window = mm.windows.last
-        
-        var screen = NSScreen.mainScreen()?.frame
-        var screenX = screen!.width / 2
-        var screenY = screen!.height / 2
+        let window = mm.windows.last
+        let screen = NSScreen.main?.frame
+        let screenX = screen!.width / 2
+        let screenY = screen!.height / 2
         
         window!.setFrameTopLeftPoint(CGPoint(x:screenX, y:screenY))
         
-        println("toggleButton val \(self.toggleButton)")
-        self.event = NSEvent.addGlobalMonitorForEventsMatchingMask(NSEventMaskFromType(NSEventType(rawValue: self.toggleButton)!)){
-            (handler:NSEvent!) in
-            println(handler.type.rawValue)
+        print("toggleButton val \(self.toggleButton)")
+        self.event = NSEvent.addGlobalMonitorForEvents(matching: NSEvent.EventTypeMask.keyUp, handler: { (event) in
+        
+            if let window = mm.windows.first {
+                window.alphaValue = 1.0
+                let frame = window.frame
+                let fakeMousePnt = NSPoint(x: frame.origin.x, y: NSScreen.main!.frame.height - frame.origin.y - frame.height)
+                var nativeMousePnt = CGPoint(x: event.locationInWindow.x, y: event.locationInWindow.y)
             
-            var window = mm.windows.first as NSWindow
-            window.alphaValue = 1.0
-            var frame = window.frame
-            var fakeMousePnt = NSPoint(x: frame.origin.x, y: NSScreen.mainScreen()!.frame.height - frame.origin.y - frame.height)
-            var nativeMousePnt = CGPoint(x: handler.locationInWindow.x, y: handler.locationInWindow.y)
-  
-            
-            // Swap fake mouse
-            window.setFrameTopLeftPoint(nativeMousePnt)
-            // Swap new mouse
-            CGWarpMouseCursorPosition(fakeMousePnt)
-            
-            
-            nativeMousePnt = NSEvent.mouseLocation()
-            println("New Native \(nativeMousePnt)")
-            
-            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC * 3))
-            dispatch_after(delayTime, dispatch_get_main_queue()){
-                window.alphaValue = 0.5
+                
+                // Swap fake mouse
+                window.setFrameTopLeftPoint(nativeMousePnt)
+                // Swap new mouse
+                CGWarpMouseCursorPosition(fakeMousePnt)
+                
+                
+                nativeMousePnt = NSEvent.mouseLocation
             }
-        }
+        })
     }
     
     func editGlobalListener(){
@@ -72,6 +65,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
-
+    
 }
-
