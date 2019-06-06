@@ -17,40 +17,32 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("App is launched...")
+        
         self.setGlobalListener()
     }
-    
-    
-    func setGlobalListener(){
-        
-        let screen = NSScreen.main?.frame
-        let screenX = screen!.width / 2
-        let screenY = screen!.height / 2
-        
-        
 
+    func setGlobalListener(){
         let cursorController = CursorController()
         let cursorWindow = NSWindow(contentViewController: cursorController)
         cursorWindowController = NSWindowController(window: cursorWindow)
     
         if let window = cursorWindowController!.window {
             print ("we have a window!")
+            
+            let frame = NSScreen.main!.frame
+            let commonPoint = NSPoint(x: frame.maxX / 4, y: frame.maxY / 4)
+            
             window.styleMask = .borderless
             window.level = .floating
             window.setContentSize(NSSize(width: 8, height: 15))
-            window.setFrameTopLeftPoint(CGPoint(x:screenX, y:screenY))
+            window.setFrameTopLeftPoint(commonPoint)
             cursorWindowController?.showWindow(nil)
             
         } else {
             print ("no window")
         }
         
-        
-
-        
-        print("toggleButton val \(self.toggleButton)")
-        
-        self.event = NSEvent.addGlobalMonitorForEvents(matching: NSEvent.EventTypeMask.keyDownb, handler: { (event) in
+        self.event = NSEvent.addGlobalMonitorForEvents(matching: NSEvent.EventTypeMask.keyDown, handler: { (event) in
             if(event.keyCode == KeyCodes.z && event.modifierFlags.contains(NSEvent.ModifierFlags.control)){
                 print("Boom")
                 if let windowController = self.cursorWindowController, let window = windowController.window {
@@ -58,14 +50,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     let mouseLocation = NSPoint(x: event.locationInWindow.x, y: event.locationInWindow.y)
                     let currentWindowLocation = NSPoint(x: window.frame.origin.x, y: window.frame.origin.y)
                     
-            
                     let newWindowLocation = NSPoint(x: mouseLocation.x, y: mouseLocation.y - window.frame.height)
                     window.setFrameOrigin(newWindowLocation)
                     
-                    let newMouseLocation = NSPoint(x: currentWindowLocation.x, y: NSScreen.main!.frame.height - (currentWindowLocation.y + window.frame.height))
+                    let newMouseLocation = NSPoint(x: currentWindowLocation.x, y: NSScreen.main!.frame.height - currentWindowLocation.y - window.frame.height)
+                    
                     CGWarpMouseCursorPosition(newMouseLocation)
                     window.makeKey()
-                
                 }
             }
         })
