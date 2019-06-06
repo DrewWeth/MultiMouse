@@ -10,49 +10,69 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    
+    var cursorWindowController: NSWindowController?
     var toggleButton:UInt = 25
     var event:Any?
     
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        print("App is launched...")
         self.setGlobalListener()
-
     }
     
+    
     func setGlobalListener(){
-        let mm = NSApplication.shared
         
-        let window = mm.windows.last
         let screen = NSScreen.main?.frame
         let screenX = screen!.width / 2
         let screenY = screen!.height / 2
         
-        window!.setFrameTopLeftPoint(CGPoint(x:screenX, y:screenY))
+        
+
+        let cursorController = CursorController()
+        let cursorWindow = NSWindow(contentViewController: cursorController)
+        cursorWindowController = NSWindowController(window: cursorWindow)
+    
+        if let window = cursorWindowController!.window {
+            print ("we have a window!")
+            window.styleMask = .borderless
+            window.level = .floating
+            window.setContentSize(NSSize(width: 8, height: 15))
+            window.setFrameTopLeftPoint(CGPoint(x:screenX, y:screenY))
+            cursorWindowController?.showWindow(nil)
+            
+        } else {
+            print ("no window")
+        }
+        
+        
+
         
         print("toggleButton val \(self.toggleButton)")
-        self.event = NSEvent.addGlobalMonitorForEvents(matching: NSEvent.EventTypeMask.keyUp, handler: { (event) in
         
-            if let window = mm.windows.first {
-                window.alphaValue = 1.0
-                let frame = window.frame
-                let fakeMousePnt = NSPoint(x: frame.origin.x, y: NSScreen.main!.frame.height - frame.origin.y - frame.height)
-                var nativeMousePnt = CGPoint(x: event.locationInWindow.x, y: event.locationInWindow.y)
+        self.event = NSEvent.addGlobalMonitorForEvents(matching: NSEvent.EventTypeMask.keyDownb, handler: { (event) in
+            if(event.keyCode == KeyCodes.z && event.modifierFlags.contains(NSEvent.ModifierFlags.control)){
+                print("Boom")
+                if let windowController = self.cursorWindowController, let window = windowController.window {
+
+                    let mouseLocation = NSPoint(x: event.locationInWindow.x, y: event.locationInWindow.y)
+                    let currentWindowLocation = NSPoint(x: window.frame.origin.x, y: window.frame.origin.y)
+                    
             
+                    let newWindowLocation = NSPoint(x: mouseLocation.x, y: mouseLocation.y - window.frame.height)
+                    window.setFrameOrigin(newWindowLocation)
+                    
+                    let newMouseLocation = NSPoint(x: currentWindowLocation.x, y: NSScreen.main!.frame.height - (currentWindowLocation.y + window.frame.height))
+                    CGWarpMouseCursorPosition(newMouseLocation)
+                    window.makeKey()
                 
-                // Swap fake mouse
-                window.setFrameTopLeftPoint(nativeMousePnt)
-                // Swap new mouse
-                CGWarpMouseCursorPosition(fakeMousePnt)
-                
-                
-                nativeMousePnt = NSEvent.mouseLocation
+                }
             }
         })
     }
     
     func editGlobalListener(){
-        NSEvent.removeMonitor(self.event)
+        NSEvent.removeMonitor(self.event!)
         self.setGlobalListener()
     }
 

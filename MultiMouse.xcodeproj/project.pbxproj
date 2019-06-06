@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		72A7566F22A6612B0049B4C5 /* cursor.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A7566E22A6612B0049B4C5 /* cursor.png */; };
+		72D66D6E22A87B0700F749B1 /* CursorWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D66D6D22A87B0700F749B1 /* CursorWindowController.swift */; };
+		72D66D7122A88A8100F749B1 /* KeyCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D66D6F22A88A8100F749B1 /* KeyCodes.swift */; };
 		FE778CA01AA2566C0060E56D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE778C9F1AA2566C0060E56D /* AppDelegate.swift */; };
 		FE778CA21AA2566C0060E56D /* CursorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE778CA11AA2566C0060E56D /* CursorController.swift */; };
 		FE778CA41AA2566C0060E56D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE778CA31AA2566C0060E56D /* Images.xcassets */; };
 		FE778CA71AA2566C0060E56D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE778CA51AA2566C0060E56D /* Main.storyboard */; };
 		FE778CB31AA2566D0060E56D /* MultiMouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE778CB21AA2566D0060E56D /* MultiMouseTests.swift */; };
-		FE8ED35B1AA27ECF0085928B /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE8ED35A1AA27ECF0085928B /* Window.xib */; };
 		FE8ED35F1AA281830085928B /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8ED35E1AA281830085928B /* ApplicationServices.framework */; };
 		FEA210841AA55CEC001F4497 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA210831AA55CEC001F4497 /* PreferencePanes.framework */; };
 		FEA210881AA567F2001F4497 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA210871AA567F2001F4497 /* SettingsController.swift */; };
 		FECAC08D1AAC0333003B4FB6 /* mmLogoBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = FECAC08C1AAC0333003B4FB6 /* mmLogoBlack.png */; };
-		FECAC08F1AAC0AD2003B4FB6 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECAC08E1AAC0AD2003B4FB6 /* AboutController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		72A7566E22A6612B0049B4C5 /* cursor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cursor.png; path = ../cursor.png; sourceTree = "<group>"; };
+		72D66D6D22A87B0700F749B1 /* CursorWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorWindowController.swift; sourceTree = "<group>"; };
+		72D66D6F22A88A8100F749B1 /* KeyCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCodes.swift; sourceTree = "<group>"; };
 		FE778C9A1AA2566C0060E56D /* MultiMouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiMouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE778C9E1AA2566C0060E56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE778C9F1AA2566C0060E56D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,12 +44,10 @@
 		FE778CAC1AA2566D0060E56D /* MultiMouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiMouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE778CB11AA2566D0060E56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE778CB21AA2566D0060E56D /* MultiMouseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMouseTests.swift; sourceTree = "<group>"; };
-		FE8ED35A1AA27ECF0085928B /* Window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Window.xib; sourceTree = "<group>"; };
 		FE8ED35E1AA281830085928B /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		FEA210831AA55CEC001F4497 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
 		FEA210871AA567F2001F4497 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		FECAC08C1AAC0333003B4FB6 /* mmLogoBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mmLogoBlack.png; sourceTree = "<group>"; };
-		FECAC08E1AAC0AD2003B4FB6 /* AboutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,14 +95,14 @@
 			children = (
 				FE778C9F1AA2566C0060E56D /* AppDelegate.swift */,
 				FECAC08C1AAC0333003B4FB6 /* mmLogoBlack.png */,
-				72A7566E22A6612B0049B4C5 /* cursor.png */,
-				FECAC08E1AAC0AD2003B4FB6 /* AboutController.swift */,
 				FE778CA11AA2566C0060E56D /* CursorController.swift */,
-				FE8ED35A1AA27ECF0085928B /* Window.xib */,
 				FEA210871AA567F2001F4497 /* SettingsController.swift */,
 				FE778CA31AA2566C0060E56D /* Images.xcassets */,
+				72A7566E22A6612B0049B4C5 /* cursor.png */,
 				FE778CA51AA2566C0060E56D /* Main.storyboard */,
 				FE778C9D1AA2566C0060E56D /* Supporting Files */,
+				72D66D6D22A87B0700F749B1 /* CursorWindowController.swift */,
+				72D66D6F22A88A8100F749B1 /* KeyCodes.swift */,
 			);
 			path = MultiMouse;
 			sourceTree = "<group>";
@@ -213,7 +213,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE778CA41AA2566C0060E56D /* Images.xcassets in Resources */,
-				FE8ED35B1AA27ECF0085928B /* Window.xib in Resources */,
 				72A7566F22A6612B0049B4C5 /* cursor.png in Resources */,
 				FECAC08D1AAC0333003B4FB6 /* mmLogoBlack.png in Resources */,
 				FE778CA71AA2566C0060E56D /* Main.storyboard in Resources */,
@@ -235,9 +234,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEA210881AA567F2001F4497 /* SettingsController.swift in Sources */,
+				72D66D6E22A87B0700F749B1 /* CursorWindowController.swift in Sources */,
+				72D66D7122A88A8100F749B1 /* KeyCodes.swift in Sources */,
 				FE778CA21AA2566C0060E56D /* CursorController.swift in Sources */,
 				FE778CA01AA2566C0060E56D /* AppDelegate.swift in Sources */,
-				FECAC08F1AAC0AD2003B4FB6 /* AboutController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
